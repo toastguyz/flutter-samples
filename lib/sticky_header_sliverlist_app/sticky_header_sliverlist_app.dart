@@ -24,7 +24,7 @@ class _StickyHeaderSliverListAppState extends State<StickyHeaderSliverListApp> {
                 SliverChildBuilderDelegate((BuildContext context, int index) {
               return Container(
                 alignment: Alignment.center,
-                color: Colors.lightBlue[100 * (index % 9)],
+                color: Colors.cyan[100 * (index % 9)],
                 child: Text('Sublist item $index'),
               );
             }, childCount: sliverChildCount),
@@ -41,6 +41,7 @@ class _StickyHeaderSliverListAppState extends State<StickyHeaderSliverListApp> {
       widgetList
         ..add(
           SliverAppBar(
+            backgroundColor: Colors.cyan,
             automaticallyImplyLeading: false,
             title: Text("Header $index"),
             pinned: true,
@@ -53,7 +54,7 @@ class _StickyHeaderSliverListAppState extends State<StickyHeaderSliverListApp> {
             SliverChildBuilderDelegate((BuildContext context, int index) {
               return Container(
                 alignment: Alignment.center,
-                color: Colors.lightBlue[100 * (index % 9)],
+                color: Colors.cyan[100 * (index % 9)],
                 child: Text('Sublist item \* $index'),
               );
             }, childCount: sliverList.data[index].length),
@@ -75,7 +76,9 @@ class _StickyHeaderSliverListAppState extends State<StickyHeaderSliverListApp> {
 
     return Scaffold(
       appBar: AppBar(
-        title: Text("Sticky Sliver List"),
+        backgroundColor: Colors.white,
+        centerTitle: true,
+        title: Text("Sticky Sliver List",style: TextStyle(color: Colors.black),),
       ),
       body: CustomScrollView(
 //        slivers: _buildStickySliverList(20, 5),

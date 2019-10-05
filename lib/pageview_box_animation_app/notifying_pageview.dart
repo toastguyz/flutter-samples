@@ -40,9 +40,10 @@ class _NotifyingPageViewState extends State<NotifyingPageView> {
     3,
     (index) {
       return Card(
-        color: Colors.redAccent,
+        margin: EdgeInsets.symmetric(horizontal: 50.0),
+        color: Colors.orangeAccent,
         shape:
-            RoundedRectangleBorder(borderRadius: BorderRadius.circular(10.0)),
+            RoundedRectangleBorder(borderRadius: BorderRadius.circular(50.0)),
         child: Center(
           child: Text(
             "Card $index",

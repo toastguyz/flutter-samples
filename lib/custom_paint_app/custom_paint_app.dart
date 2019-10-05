@@ -48,13 +48,13 @@ class _CustomPaintAppState extends State<CustomPaintApp> {
                 width: boxSize,
                 child: CustomPaint(
                   foregroundPainter: MyPainter(
-                      lineColor: Colors.red,
+                      lineColor: Colors.blue,
                       completeColor: Colors.green,
                       width: 8.0),
                   child: ClipRRect(
                     borderRadius: BorderRadius.circular(20.0),
                     child: RaisedButton(
-                        color: Colors.blue,
+                        color: Colors.black38,
                         shape: RoundedRectangleBorder(),
                         child: Text("Size : ${boxSize}",style: TextStyle(color: Colors.white),),
                         onPressed: () {}),

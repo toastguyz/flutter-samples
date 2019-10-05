@@ -28,8 +28,8 @@ class _PageViewBoxAnimationAppState extends State<PageViewBoxAnimationApp> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.redAccent,
-        title: Text("Drag and rotate!"),
+        backgroundColor: Colors.orange,
+        title: Text("Swipe to rotate the square!!"),
       ),
       body: Padding(
         padding: const EdgeInsets.symmetric(vertical: 48.0),
@@ -50,9 +50,13 @@ class _PageViewBoxAnimationAppState extends State<PageViewBoxAnimationApp> {
                     return Transform.rotate(
                       angle: 2 * pi * _notifier.value,
                       child: Container(
-                        color: Colors.redAccent,
-                        width: 200,
-                        height: 200,
+                        width: 120,
+                        height: 120,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(20.0),
+                          shape: BoxShape.rectangle,
+                          color: Colors.orangeAccent,
+                        ),
                         child: Column(
                           mainAxisSize: MainAxisSize.min,
                           mainAxisAlignment: MainAxisAlignment.center,
